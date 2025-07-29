@@ -76,3 +76,23 @@ The burndown chart for the sprint correctly displayed the progress based on the 
 
 This project successfully executed the core Agile planning activities for an e-commerce backend system using GitHub Issues and Projects. The process involved creating user stories, refining a backlog, defining acceptance criteria, labeling issues, planning a sprint with estimations, and executing the sprint by moving tasks across a configured Kanban board. This exercise demonstrates a practical application of Agile principles in a software development context by Gabriel Demetrios Lafis.
 
+
+
+## 📋 Descrição
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📦 Instalação
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 💻 Uso
+
+Descreva aqui o conteúdo desta seção.
+
+
+## 📄 Licença
+
+Descreva aqui o conteúdo desta seção.
