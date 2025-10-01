@@ -1,0 +1,6 @@
+graph TD
+    A[Usuário] -->|Requisição HTTP| B(Aplicação Flask)
+    B -->|GET /| C{Hello World}
+    B -->|GET /status| D{Status da Aplicação}
+    C -->|JSON Response| A
+    D -->|JSON Response| A
