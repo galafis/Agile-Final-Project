@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agile Final Project</title>
+    <title>Agile Final Project - Gabriel Demetrios Lafis</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
@@ -14,63 +14,149 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             background: #fff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #0056b3;
         }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #007bff;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
         pre {
-            background: #eee;
+            background-color: #e9ecef;
             padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .mermaid-diagram {
+            text-align: center;
             margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Agile Final Project: E-commerce Product Catalog Backend</h1>
-        <p>This is a demonstration page for the <strong>Agile Final Project</strong> by Gabriel Demetrios Lafis. This project showcases the implementation of Agile methodologies (Scrum and Kanban) in developing a backend for an e-commerce product catalog using Flask.</p>
-        
-        <h2>Project Overview</h2>
-        <p>The project focuses on the initial Agile planning phases, user story creation, backlog refinement, sprint planning, and execution. It includes a simple Flask API for product management with unit tests.</p>
+        <div class="header">
+            <img src="https://avatars.githubusercontent.com/u/10000000?v=4" alt="Gabriel Demetrios Lafis">
+            <h1>Agile Final Project: E-commerce Product Catalog Backend</h1>
+            <p>Por Gabriel Demetrios Lafis</p>
+            <p>
+                <a href="https://github.com/galafis/Agile-Final-Project" target="_blank">Repositório GitHub</a> |
+                <a href="https://www.linkedin.com/in/gabrieldemetrioslafis/" target="_blank">LinkedIn</a>
+            </p>
+        </div>
 
-        <h2>Technologies Used</h2>
-        <ul>
-            <li>Python</li>
-            <li>Flask</li>
-            <li>GitHub Issues & Projects</li>
-            <li>Mermaid for diagrams</li>
-        </ul>
+        <div class="section">
+            <h2>Visão Geral do Projeto</h2>
+            <p>Este repositório documenta o processo de planejamento Ágil empreendido para o desenvolvimento de um sistema de catálogo de produtos de backend para um site de e-commerce. O projeto foi concluído por Gabriel Demetrios Lafis como parte da demonstração de proficiência em metodologias Ágeis, particularmente Scrum e Kanban, relevantes para o Certificado Profissional IBM DevOps & Software Engineering.</p>
+            <p>O objetivo foi executar as fases iniciais de planejamento Ágil para uma equipe encarregada de construir a funcionalidade central de um catálogo de produtos de e-commerce. Isso envolveu desempenhar os papéis de Product Owner, Scrum Master e Desenvolvedor para definir requisitos, construir um backlog, planejar um sprint e executar o sprint usando uma abordagem de quadro Kanban dentro do GitHub Projects.</p>
+        </div>
 
-        <h2>API Endpoints (Example)</h2>
-        <p>The Flask application provides the following basic endpoints:</p>
-        <ul>
-            <li><code>GET /</code>: Returns a welcome message.</li>
-            <li><code>GET /status</code>: Returns the application status.</li>
-        </ul>
-        <p>You can view the full documentation in the <a href="https://github.com/galafis/Agile-Final-Project/blob/main/README.md">README.md</a> file.</p>
+        <div class="section">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li><strong>API RESTful:</strong> Implementação de endpoints para gerenciar produtos (Criar, Ler, Atualizar, Excluir).</li>
+                <li><strong>Metodologias Ágeis:</strong> Demonstração prática de Scrum e Kanban usando GitHub Issues e Projects.</li>
+                <li><strong>Testes Unitários:</strong> Cobertura de testes para garantir a funcionalidade da API.</li>
+                <li><strong>Estrutura Profissional:</strong> Organização clara do código e recursos em diretórios dedicados.</li>
+            </ul>
+        </div>
 
-        <h2>Architecture Diagram</h2>
-        <img src="../assets/architecture.png" alt="Architecture Diagram">
+        <div class="section">
+            <h2>Tecnologias Utilizadas</h2>
+            <ul>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>GitHub Issues & Projects (para gestão Ágil)</li>
+                <li>Mermaid (para diagramas)</li>
+            </ul>
+        </div>
 
-        <h2>Author</h2>
-        <p><strong>Gabriel Demetrios Lafis</strong></p>
-        <ul>
-            <li><a href="https://github.com/galafis">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/gabrieldemetrioslafis/">LinkedIn</a></li>
-        </ul>
+        <div class="section">
+            <h2>Instalação e Uso</h2>
+            <h3>Instalação</h3>
+            <p>Para configurar e executar o projeto localmente, siga os passos abaixo:</p>
+            <pre><code>git clone https://github.com/galafis/Agile-Final-Project.git
+cd Agile-Final-Project
+python3 -m venv venv
+source venv/bin/activate  # No Windows use `venv\Scripts\activate`
+pip install -r requirements.txt</code></pre>
+            <h3>Uso da API</h3>
+            <p>1. Execute a aplicação Flask:</p>
+            <pre><code>python3 src/app.py</code></pre>
+            <p>A API estará disponível em <code>http://127.0.0.1:5000/</code>.</p>
+            <p>2. Endpoints da API:</p>
+            <ul>
+                <li><code>GET /</code>: Retorna uma mensagem de boas-vindas.</li>
+                <li><code>GET /status</code>: Retorna o status da aplicação.</li>
+            </ul>
+            <h3>Executar Testes</h3>
+            <pre><code>python3 -m unittest tests/test_app.py</code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Diagrama de Arquitetura</h2>
+            <div class="mermaid-diagram">
+                <pre><code>graph TD
+    A[Usuário] -->|Requisição HTTP| B(Aplicação Flask)
+    B -->|GET /| C{Hello World}
+    B -->|GET /status| D{Status da Aplicação}
+    C -->|Resposta JSON| A
+    D -->|Resposta JSON| A</code></pre>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Gabriel Demetrios Lafis. Licenciado sob a Licença MIT.</p>
+        </div>
     </div>
 </body>
 </html>
