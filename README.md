@@ -1,284 +1,141 @@
-# 🚀 Agile Final Project
+# Agile Final Project
 
-> Coursera - IBM DevOps and Software Engineering 
+Coursera - IBM DevOps and Software Engineering
 
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg)](https://img.shields.io/badge/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://img.shields.io/badge/)
-[![Flask](https://img.shields.io/badge/Flask-3.0-000000.svg)](https://img.shields.io/badge/)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-3.0-000000.svg)](https://flask.palletsprojects.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-[English](#english) | [Português](#português)
+[English](#english) | [Portugues](#portugues)
+
+---
+
+## Portugues
+
+### Visao Geral
+
+Projeto final do curso **IBM DevOps and Software Engineering** na Coursera. O foco principal do curso era a metodologia Agile — criacao de User Stories, gerenciamento de Kanban board com GitHub Issues, e planejamento de sprints.
+
+O codigo em si e uma aplicacao Flask minima (hello-world) com dois endpoints, usada como base para praticar o fluxo de trabalho Agile.
+
+### Arquitetura
+
+```mermaid
+graph LR
+    Client[Cliente HTTP] -->|GET /| App[Flask App]
+    Client -->|GET /status| App
+    App -->|JSON| Client
+```
+
+### Endpoints
+
+| Rota | Metodo | Resposta |
+|------|--------|----------|
+| `/` | GET | `{"message": "Hello, Agile World!"}` |
+| `/status` | GET | `{"status": "OK", "version": "1.0.0"}` |
+
+### Como Executar
+
+```bash
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Executar a aplicacao
+python src/app.py
+
+# Executar testes
+pytest tests/test_app.py -v
+```
+
+### Estrutura do Projeto
+
+```
+Agile-Final-Project/
+├── src/
+│   └── app.py              # Aplicacao Flask (2 endpoints)
+├── tests/
+│   └── test_app.py         # Testes unitarios
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       └── user_story.md   # Template para User Stories
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
+
+### Tecnologias
+
+| Tecnologia | Uso |
+|------------|-----|
+| Python | Linguagem principal |
+| Flask | Framework web |
+| pytest | Testes |
 
 ---
 
 ## English
 
-### 🎯 Overview
+### Overview
 
-**Agile Final Project** is a production-grade Python application complemented by HTML that showcases modern software engineering practices including clean architecture, comprehensive testing, containerized deployment, and CI/CD readiness.
+Final project for the **IBM DevOps and Software Engineering** course on Coursera. The main focus of the course was Agile methodology — creating User Stories, managing a Kanban board with GitHub Issues, and sprint planning.
 
-The codebase comprises **201 lines** of source code organized across **3 modules**, following industry best practices for maintainability, scalability, and code quality.
+The code itself is a minimal Flask application (hello-world) with two endpoints, used as a base to practice the Agile workflow.
 
-### ✨ Key Features
-
-- **🐳 Containerized**: Docker support for consistent deployment
-- **🏗️ Object-Oriented**: 1 core classes with clean architecture
-- **📐 Clean Architecture**: Modular design with clear separation of concerns
-- **🧪 Test Coverage**: Unit and integration tests for reliability
-- **📚 Documentation**: Comprehensive inline documentation and examples
-- **🔧 Configuration**: Environment-based configuration management
-
-### 🏗️ Architecture
+### Architecture
 
 ```mermaid
-graph TB
-    subgraph Client["🖥️ Client Layer"]
-        A[Web Client]
-        B[API Documentation]
-    end
-    
-    subgraph API["⚡ API Layer"]
-        C[Middleware Pipeline]
-        D[Route Handlers]
-        E[Business Logic]
-    end
-    
-    subgraph Data["💾 Data Layer"]
-        F[(Primary Database)]
-        G[Cache]
-    end
-    
-    A --> C
-    B --> C
-    C --> D --> E
-    E --> F
-    E --> G
-    
-    style Client fill:#e1f5fe
-    style API fill:#f3e5f5
-    style Data fill:#fff3e0
+graph LR
+    Client[HTTP Client] -->|GET /| App[Flask App]
+    Client -->|GET /status| App
+    App -->|JSON| Client
 ```
 
-### 🚀 Quick Start
+### Endpoints
 
-#### Prerequisites
+| Route | Method | Response |
+|-------|--------|----------|
+| `/` | GET | `{"message": "Hello, Agile World!"}` |
+| `/status` | GET | `{"status": "OK", "version": "1.0.0"}` |
 
-- Python 3.12+
-- pip (Python package manager)
-
-#### Installation
+### How to Run
 
 ```bash
-# Clone the repository
-git clone https://github.com/galafis/Agile-Final-Project.git
-cd Agile-Final-Project
-
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
 # Install dependencies
 pip install -r requirements.txt
-```
 
-#### Running
-
-```bash
 # Run the application
 python src/app.py
+
+# Run tests
+pytest tests/test_app.py -v
 ```
 
-### 🧪 Testing
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage report
-pytest --cov --cov-report=html
-
-# Run specific test module
-pytest tests/test_main.py -v
-
-# Run with detailed output
-pytest -v --tb=short
-```
-
-### 📁 Project Structure
+### Project Structure
 
 ```
 Agile-Final-Project/
-├── assets/
-├── docs/          # Documentation
-├── src/          # Source code
-│   └── app.py
-├── tests/         # Test suite
-│   └── test_app.py
-├── Dockerfile
+├── src/
+│   └── app.py              # Flask application (2 endpoints)
+├── tests/
+│   └── test_app.py         # Unit tests
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       └── user_story.md   # User Story template
 ├── LICENSE
 ├── README.md
 └── requirements.txt
 ```
 
-### 🛠️ Tech Stack
+### Technologies
 
-| Technology | Description | Role |
-|------------|-------------|------|
-| **Python** | Core Language | Primary |
-| **Docker** | Containerization platform | Framework |
-| **Flask** | Lightweight web framework | Framework |
-| HTML | 1 files | Supporting |
-
-### 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### 👤 Author
-
-**Gabriel Demetrios Lafis**
-- GitHub: [@galafis](https://github.com/galafis)
-- LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
+| Technology | Usage |
+|------------|-------|
+| Python | Core language |
+| Flask | Web framework |
+| pytest | Testing |
 
 ---
 
-## Português
-
-### 🎯 Visão Geral
-
-**Agile Final Project** é uma aplicação Python de nível profissional, complementada por HTML que demonstra práticas modernas de engenharia de software, incluindo arquitetura limpa, testes abrangentes, implantação containerizada e prontidão para CI/CD.
-
-A base de código compreende **201 linhas** de código-fonte organizadas em **3 módulos**, seguindo as melhores práticas do setor para manutenibilidade, escalabilidade e qualidade de código.
-
-### ✨ Funcionalidades Principais
-
-- **🐳 Containerized**: Docker support for consistent deployment
-- **🏗️ Object-Oriented**: 1 core classes with clean architecture
-- **📐 Clean Architecture**: Modular design with clear separation of concerns
-- **🧪 Test Coverage**: Unit and integration tests for reliability
-- **📚 Documentation**: Comprehensive inline documentation and examples
-- **🔧 Configuration**: Environment-based configuration management
-
-### 🏗️ Arquitetura
-
-```mermaid
-graph TB
-    subgraph Client["🖥️ Client Layer"]
-        A[Web Client]
-        B[API Documentation]
-    end
-    
-    subgraph API["⚡ API Layer"]
-        C[Middleware Pipeline]
-        D[Route Handlers]
-        E[Business Logic]
-    end
-    
-    subgraph Data["💾 Data Layer"]
-        F[(Primary Database)]
-        G[Cache]
-    end
-    
-    A --> C
-    B --> C
-    C --> D --> E
-    E --> F
-    E --> G
-    
-    style Client fill:#e1f5fe
-    style API fill:#f3e5f5
-    style Data fill:#fff3e0
-```
-
-### 🚀 Início Rápido
-
-#### Prerequisites
-
-- Python 3.12+
-- pip (Python package manager)
-
-#### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/galafis/Agile-Final-Project.git
-cd Agile-Final-Project
-
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-#### Running
-
-```bash
-# Run the application
-python src/app.py
-```
-
-### 🧪 Testing
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage report
-pytest --cov --cov-report=html
-
-# Run specific test module
-pytest tests/test_main.py -v
-
-# Run with detailed output
-pytest -v --tb=short
-```
-
-### 📁 Estrutura do Projeto
-
-```
-Agile-Final-Project/
-├── assets/
-├── docs/          # Documentation
-├── src/          # Source code
-│   └── app.py
-├── tests/         # Test suite
-│   └── test_app.py
-├── Dockerfile
-├── LICENSE
-├── README.md
-└── requirements.txt
-```
-
-### 🛠️ Stack Tecnológica
-
-| Tecnologia | Descrição | Papel |
-|------------|-----------|-------|
-| **Python** | Core Language | Primary |
-| **Docker** | Containerization platform | Framework |
-| **Flask** | Lightweight web framework | Framework |
-| HTML | 1 files | Supporting |
-
-### 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para enviar um Pull Request.
-
-### 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-### 👤 Autor
-
-**Gabriel Demetrios Lafis**
+**Autor / Author:** Gabriel Demetrios Lafis
 - GitHub: [@galafis](https://github.com/galafis)
 - LinkedIn: [Gabriel Demetrios Lafis](https://linkedin.com/in/gabriel-demetrios-lafis)
